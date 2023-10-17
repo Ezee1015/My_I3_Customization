@@ -26,7 +26,7 @@ send:
 	# Copia la configuración
 	@for i in ${CONFIG_FOLDERS} ; do                               \
 		LOCAL_FILE=${LOCAL_CONFIG_DIR}/$$i;                          \
-		cp $$LOCAL_FILE ${REPO_CONFIG_DIR};                          \
+		cp -r $$LOCAL_FILE ${REPO_CONFIG_DIR};                       \
 	done
 
 # Updates from the repository the lua files. DESTRUCTIVE!!!
