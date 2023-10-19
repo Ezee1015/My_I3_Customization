@@ -26,6 +26,14 @@ My I3 bare minimum customization to get it working just like I need
 |     **`MOD + [01234567890]`**     | Va al espacio de trabajo seleccionado                        |
 | **`MOD + Shift + [01234567890]`** | Mueve la ventana seleccionada al espacio de trabajo indicado |
 
+### Layout
+
+|     Atajo     | Función                                      |
+|:-------------:|----------------------------------------------|
+| **`MOD + e`** | Modo layout: Tiling                          |
+| **`MOD + s`** | Modo layout: Pila de ventanas (superpuestos) |
+| **`MOD + w`** | Modo layout: en Tabs                         |
+
 ### Integrado
 
 |            Atajo           | Función                                              |
