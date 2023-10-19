@@ -214,6 +214,8 @@ exec_always feh --bg-scale /home/leo/Imágenes/FONDOS/wallpaper.jpg
 exec numlockx on
 exec /home/leo/github/My_Scripts/sh/cam0.sh
 exec dunst
+exec /home/leo/github/My_Scripts/sh/mic-webcam-check/webcamCheck.sh
+exec /home/leo/github/My_Scripts/sh/mic-webcam-check/micCheck.sh
 
 ## Assign
 assign [class="ffplay"] $workspace4
