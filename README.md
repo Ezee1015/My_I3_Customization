@@ -69,3 +69,7 @@ My I3 bare minimum customization to get it working just like I need
 WM_CLASS(STRING) = "YYY", "XXX"
 ``
 5. Poner en el config de i3: `assign [class="XXX"] $workspace10`
+
+## Sonidos
+Fuente:
+- <https://invent.kde.org/plasma/ocean-sound-theme>

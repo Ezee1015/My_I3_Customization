@@ -216,6 +216,7 @@ exec /home/leo/github/My_Scripts/sh/cam0.sh
 exec dunst
 exec /home/leo/github/My_Scripts/sh/mic-webcam-check/webcamCheck.sh
 exec /home/leo/github/My_Scripts/sh/mic-webcam-check/micCheck.sh
+exec_always ffplay ~/.config/i3/sounds/login.ogg -autoexit -nodisp -loglevel quiet
 
 ## Assign
 assign [class="ffplay"] $workspace4
