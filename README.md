@@ -20,6 +20,8 @@ My I3 bare minimum customization to get it working just like I need
 |        **`MOD + e`**        | Vuelve al modo *Tiling*                                                                   |
 | **`Mod + Shift + Espacio`** | Convierte una ventana tiling en flotante y viceversa                                      |
 |     **`Mod + Espacio`**     | Permite navegar por ventanas flotante, y si se presiona de vuelta, vuelve al modo tailing |
+|        **`Mod + a`**        | Selecciona el grupo de ventanas al que forma parte la ventana seleccionada actualmente    |
+|    **`Mod + Shift + a`**    | Selecciona la ventana "hija" del grupo de ventanas seleccionado                           |
 
 ### Espacios de Trabajo
 
