@@ -7,8 +7,8 @@ My I3 bare minimum customization to get it working just like I need
 
 ### Ventanas
 
-|             Atajo            | Función                                                                              |
-|:----------------------------:|--------------------------------------------------------------------------------------|
+|            Atajo           | Función                                                                              |
+|:--------------------------:|--------------------------------------------------------------------------------------|
 |     **`MOD + [hjkl]`**     | Seleccionar la ventana de la izquierda, abajo, arriba o derecha                      |
 | **`MOD + Shift + [hjkl]`** | Mover la ventana a la izquierda, abajo, arriba o derecha                             |
 |        **`MOD + r`**       | Cambia el tamaño de las ventanas. Se puede usar [hjkl] para mover                    |
@@ -18,6 +18,8 @@ My I3 bare minimum customization to get it working just like I need
 |        **`MOD + s`**       | *Stack* (apila) toda las ventanas                                                    |
 |        **`MOD + w`**       | Convierte las ventanas en *Tabs*                                                     |
 |        **`MOD + e`**       | Vuelve al modo *Tiling*                                                              |
+| **`Mod+ Shift + Espacio`** | Convierte una ventana tiling en flotante y viceversa                                 |
+| **`Mod+ Espacio`** | Selecciona una ventana flotante, y si se presiona de vuelta, vuelve al modo tailing                                 |
 
 ### Espacios de Trabajo
 
@@ -43,7 +45,6 @@ My I3 bare minimum customization to get it working just like I need
 |    **`MOD + Shift + e`**   | Salir de I3                                          |
 |      **`MOD + Enter`**     | Abrir terminal (Alacritty)                           |
 |        **`MOD + d`**       | Abre `dmenu`                                         |
-| **`Mod+ Shift + Espacio`** | Convierte una ventana tiling en flotante y viceversa |
 
 ### Dunst (notificaciones)
 
