@@ -3,6 +3,7 @@ set $mod Mod1
 # Refresh some widgets
 set $refresh_volume pkill -SIGRTMIN+2 i3blocks && ~/.config/i3/volControl.sh
 set $refresh_caps_lock pkill -SIGRTMIN+10 i3blocks
+set $refresh_mute_notifications pkill -SIGRTMIN+3 i3blocks
 
 font pango:hack 8
 
@@ -38,6 +39,8 @@ bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+bindsym $mod+n exec dunstctl set-paused toggle && $refresh_mute_notifications
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
