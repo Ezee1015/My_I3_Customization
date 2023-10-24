@@ -84,6 +84,9 @@ bindsym $mod+Shift+Right move right
 # split in horizontal orientation
 bindsym $mod+Shift+v split h
 
+# Clipboard
+bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu
+
 # split in vertical orientation
 bindsym $mod+v split v
 
@@ -221,6 +224,7 @@ exec /home/leo/github/My_Scripts/sh/mic-webcam-check/webcamCheck.sh
 exec /home/leo/github/My_Scripts/sh/mic-webcam-check/micCheck.sh
 exec_always ffplay ~/.config/i3/sounds/login.ogg -autoexit -nodisp -loglevel quiet
 exec /home/leo/.config/i3/i3-battery-popup/i3-battery-popup -i "battery-020"
+exec clipmenud
 
 ## Assign
 assign [class="ffplay"] $workspace4

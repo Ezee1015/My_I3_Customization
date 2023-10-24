@@ -5,7 +5,7 @@ LOCAL_CONFIG_DIR=~/.config
 CONFIG_FOLDERS=dunst rofi i3
 PLUGIN_CONFIG_FILES=dunst/dunstrc rofi/config.rasi i3/i3blocks.conf i3/config i3/weather.sh i3/volControl.sh
 
-# Requisitos: i3 rofi i3lock feh numlockx lxappearance rofi-calc i3blocks pavucontrol dunst network-manager-applet perl lm_sensors thunar breeze-icons
+# Requisitos: i3 rofi i3lock feh numlockx lxappearance rofi-calc i3blocks pavucontrol dunst network-manager-applet perl lm_sensors thunar breeze-icons clipmenu ffmpeg
 APT_PACKAGES=
 PACMAN_PACKAGES=
 ZYPPER_PACKAGES=
