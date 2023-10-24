@@ -40,7 +40,7 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym $mod+n exec dunstctl set-paused toggle && $refresh_mute_notifications
+bindsym $mod+n exec BLOCK_BUTTON=1 ~/.config/i3/i3blocks-contrib/dunst/dunst && $refresh_mute_notifications
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
