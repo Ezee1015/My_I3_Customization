@@ -7,7 +7,7 @@ PLUGIN_CONFIG_FILES=dunst/dunstrc rofi/config.rasi i3/i3blocks.conf i3/config i3
 
 # Requisitos: i3 rofi i3lock feh numlockx lxappearance rofi-calc i3blocks pavucontrol dunst network-manager-applet perl lm_sensors thunar breeze-icons clipmenu ffmpeg
 APT_PACKAGES=
-PACMAN_PACKAGES=
+PACMAN_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance rofi-calc i3blocks pavucontrol dunst network-manager-applet perl lm_sensors thunar breeze-icons clipmenu ffmpeg
 ZYPPER_PACKAGES=
 
 # Updates and install the lua files from the repository
