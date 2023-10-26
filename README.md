@@ -59,11 +59,15 @@ My I3 bare minimum customization to get it working just like I need
 
 ### Custom
 
-|         Atajo         | Función                                   |
-|:---------------------:|-------------------------------------------|
-| **`MOD + Shift + x`** | Bloquea la pantalla                       |
-| **`MOD + Shift + d`** | Abre `rofi` en busca de archivos .desktop |
-|     **`MOD + c`**     | Abre el historial del portapapeles        |
+|                Atajo                | Función                                   |
+|:-----------------------------------:|-------------------------------------------|
+|        **`MOD + Shift + x`**        | Bloquea la pantalla                       |
+|        **`MOD + Shift + d`**        | Abre `rofi` en busca de archivos .desktop |
+|            **`MOD + c`**            | Abre el historial del portapapeles        |
+|          **`PrintScreen`**          | Screenshot de la pantalla enter           |
+|      **`Shift + PrintScreen`**      | Screenshot de una región seleccionada     |
+| **`Control + Shift + PrintScreen`** | Screenshot de la ventana activa           |
+|     **`Control + PrintScreen`**     | Abre la carpeta ~/Imágenes                |
 
 ## Para asociar una aplicación a un workspace:
 1. Abrir la aplicación

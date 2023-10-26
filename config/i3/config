@@ -213,6 +213,11 @@ bindsym Control+space exec dunstctl close
 bindsym Control+Shift+space exec dunstctl close-all
 bindsym Control+Shift+period exec dunstctl history-pop
 
+bindsym Print exec i3-scrot -d
+bindsym --release Shift+Print exec i3-scrot -s
+bindsym Control+Shift+Print exec i3-scrot -w
+bindsym Control+Print exec thunar ~/Imágenes
+
 # Auto execute app at startup....
 # exec --> Ejecuta al inicio
 # exec_always --> Ejecuta cada vez que inicia o reinicia I3
