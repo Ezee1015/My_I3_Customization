@@ -79,6 +79,7 @@ WM_CLASS(STRING) = "YYY", "XXX"
 ``
 5. Poner en el config de i3: `assign [class="XXX"] $workspace10`
 
-## Sonidos
-Fuente:
-- <https://invent.kde.org/plasma/ocean-sound-theme>
+## Dependencias incluidas en este repo (agradecimientos)
+Fuentes:
+- <https://invent.kde.org/plasma/ocean-sound-theme> (audios)
+- <https://gitlab.manjaro.org/packages/community/i3/i3-scrot> (script i3-scrot)
