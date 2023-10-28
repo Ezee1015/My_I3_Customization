@@ -191,9 +191,11 @@ bindsym $mod+End exec i3-nagbar -t warning -m "NO IMPLEMENTADO: Bajar brillo"
 # Modo de salir
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 mode "exit: [l]ogout, [r]eboot, [s]hutdown, [S]uspend" {
-  bindsym l exec i3-msg exit
-  bindsym r exec reboot
-  bindsym s exec shutdown now
+  set $shutdown_music ffplay ~/.config/i3/sounds/logout.ogg -autoexit -nodisp -loglevel quiet
+
+  bindsym l exec $shutdown_music && i3-msg exit
+  bindsym r exec $shutdown_music && reboot
+  bindsym s exec $shutdown_music && shutdown now
   bindsym Shift+s exec systemctl suspend && i3-msg mode "default"
   bindsym Escape mode "default"
   bindsym Return mode "default"
