@@ -5,7 +5,7 @@ LOCAL_CONFIG_DIR=~/.config
 CONFIG_FOLDERS=dunst rofi i3
 PLUGIN_CONFIG_FILES=dunst/dunstrc rofi/config.rasi i3/i3blocks.conf i3/config i3/weather.sh i3/volControl.sh
 
-APT_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance i3blocks pavucontrol dunst nm-tray perl lm-sensors thunar breeze-icon-theme ffmpeg scrot gvfs rofi-dev qalc libtool libxfixes-dev xsel fonts-hack-ttf
+APT_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance i3blocks pavucontrol dunst nm-tray perl lm-sensors thunar breeze-icon-theme ffmpeg scrot gvfs rofi-dev qalc libtool libxfixes-dev xsel
 PACMAN_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance rofi-calc i3blocks pavucontrol dunst network-manager-applet perl lm-sensors thunar breeze-icons clipmenu ffmpeg scrot i3-scrot gvfs ttf-hack-nerd
 ZYPPER_PACKAGES=
 
@@ -21,6 +21,8 @@ install:
 	$(info cd /tmp/ && git clone https://github.com/cdown/clipnotify && cd clipnotify && make && sudo make install)
 	$(info cd /tmp/ && git clone https://github.com/cdown/clipmenu && cd clipmenu && sudo make install)
 	$(info cd /tmp/ && git clone https://github.com/svenstaro/rofi-calc.git && cd rofi-calc/ && mkdir m4 && autoreconf -i && mkdir build && cd build/ && ../configure && make && sudo make install)
+	$(info sudo rm -r /usr/share/fonts/truetype/hack)
+	$(info sudo mkdir /usr/share/fonts/truetype/hack && sudo tar -xf Hack.tar.xz -C /usr/share/fonts/truetype/hack)
 
 # Updates and send to the repository the lua files
 send:
