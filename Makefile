@@ -5,8 +5,8 @@ LOCAL_CONFIG_DIR=~/.config
 CONFIG_FOLDERS=dunst rofi i3
 PLUGIN_CONFIG_FILES=dunst/dunstrc rofi/config.rasi i3/i3blocks.conf i3/config i3/weather.sh i3/volControl.sh
 
-APT_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance i3blocks pavucontrol dunst nm-tray perl lm-sensors thunar breeze-icon-theme ffmpeg scrot gvfs rofi-dev qalc libtool libxfixes-dev xsel
-PACMAN_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance rofi-calc i3blocks pavucontrol dunst network-manager-applet perl lm-sensors thunar breeze-icons clipmenu ffmpeg scrot i3-scrot gvfs
+APT_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance i3blocks pavucontrol dunst nm-tray perl lm-sensors thunar breeze-icon-theme ffmpeg scrot gvfs rofi-dev qalc libtool libxfixes-dev xsel fonts-hack-ttf
+PACMAN_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance rofi-calc i3blocks pavucontrol dunst network-manager-applet perl lm-sensors thunar breeze-icons clipmenu ffmpeg scrot i3-scrot gvfs ttf-hack-nerd
 ZYPPER_PACKAGES=
 
 # Updates and install the lua files from the repository
