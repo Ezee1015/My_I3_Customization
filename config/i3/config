@@ -219,6 +219,7 @@ bindsym Print exec i3-scrot -d
 bindsym --release Shift+Print exec i3-scrot -s
 bindsym Control+Shift+Print exec i3-scrot -w
 bindsym Control+Print exec thunar ~/Imágenes
+bindsym --release $mod+Mod2+KP_0 exec xmag
 
 # Auto execute app at startup....
 # exec --> Ejecuta al inicio
@@ -281,3 +282,4 @@ bar {
 }
 
 for_window [class="Yad"] floating enable
+for_window [class="Xmag"] floating enable
