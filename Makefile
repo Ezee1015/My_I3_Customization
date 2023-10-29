@@ -20,6 +20,7 @@ install:
 	$(info sudo cp i3-scrot/i3-scrot /usr/bin/)
 	$(info cd /tmp/ && git clone https://github.com/cdown/clipnotify && cd clipnotify && make && sudo make install)
 	$(info cd /tmp/ && git clone https://github.com/cdown/clipmenu && cd clipmenu && sudo make install)
+	$(info cd /tmp/ && git clone https://github.com/svenstaro/rofi-calc.git && cd rofi-calc/ && mkdir m4 && autoreconf -i && mkdir build && cd build/ && ../configure && make && sudo make install)
 
 # Updates and send to the repository the lua files
 send:
