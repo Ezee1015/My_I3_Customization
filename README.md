@@ -69,6 +69,7 @@ My I3 bare minimum customization to get it working just like I need
 | **`Control + Shift + PrintScreen`** | Screenshot de la ventana activa           |
 |     **`Control + PrintScreen`**     | Abre la carpeta ~/Imágenes                |
 |        **`MOD + 0 (numpad)`**       | *Screen magnifier*                        |
+|            **`MOD + z`**            | *Custom Screen magnifier* con feh y scrot |
 
 ## Para asociar una aplicación a un workspace:
 1. Abrir la aplicación
