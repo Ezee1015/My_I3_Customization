@@ -220,7 +220,7 @@ bindsym --release Shift+Print exec i3-scrot -s
 bindsym Control+Shift+Print exec i3-scrot -w
 bindsym Control+Print exec thunar ~/Imágenes
 bindsym --release $mod+Mod2+KP_0 exec xmag
-bindsym --release $mod+Mod2+KP_0 exec rm /tmp/img.png & scrot -s -F /tmp/img.png && feh /tmp/img.png
+bindsym --release $mod+z exec rm /tmp/img.png & scrot -s -F /tmp/img.png && feh /tmp/img.png
 
 # Auto execute app at startup....
 # exec --> Ejecuta al inicio
