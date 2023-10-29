@@ -17,7 +17,8 @@ install:
 	@cp -r ${REPO_CONFIG_DIR}/* ${LOCAL_CONFIG_DIR}/
 	$(info Si es debian, ejecutar...)
 	$(info )
-	$(info sudo cp i3-scrot/i3-scrot /usr/bin/)
+	# I3-scrot
+	$(info git clone https://gitlab.manjaro.org/packages/community/i3/i3-scrot && sudo cp i3-scrot/i3-scrot /usr/bin/)
 	# Clipnotify (dependencia de Clipmenu)
 	$(info cd /tmp/ && git clone https://github.com/cdown/clipnotify && cd clipnotify && make && sudo make install)
 	# ClipMenu
