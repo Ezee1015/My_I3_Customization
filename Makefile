@@ -21,6 +21,7 @@ install:
 	$(info cd /tmp/ && git clone https://github.com/cdown/clipnotify && cd clipnotify && make && sudo make install)
 	$(info cd /tmp/ && git clone https://github.com/cdown/clipmenu && cd clipmenu && sudo make install)
 	$(info cd /tmp/ && git clone https://github.com/svenstaro/rofi-calc.git && cd rofi-calc/ && mkdir m4 && autoreconf -i && mkdir build && cd build/ && ../configure && make && sudo make install)
+	$(info wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip)
 	$(info sudo rm -r /usr/share/fonts/truetype/hack)
 	$(info sudo mkdir /usr/share/fonts/truetype/hack && sudo tar -xf Hack.tar.xz -C /usr/share/fonts/truetype/hack)
 
