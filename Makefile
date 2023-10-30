@@ -14,7 +14,7 @@ install:
 	if [ "$(DISTRO)" = "debian" ]  || [ "$(DISTRO)" = "linuxmint" ]; then                                                                        \
 		sudo apt install ${APT_PACKAGES};                                                                          \
 		git clone https://gitlab.manjaro.org/packages/community/i3/i3-scrot && sudo cp i3-scrot/i3-scrot /usr/bin/; \
-		wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip;                             \
+		wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.tar.xz ;                         \
 		sudo rm -r /usr/share/fonts/truetype/hack;                                                                  \
 		sudo mkdir /usr/share/fonts/truetype/hack && sudo tar -xf Hack.tar.xz -C /usr/share/fonts/truetype/hack;    \
 		cd /tmp/ && git clone https://github.com/cdown/clipnotify && cd clipnotify && make && sudo make install;    \
