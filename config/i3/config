@@ -16,10 +16,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-# Para adminsitrar las conexiones a internet
-exec --no-startup-id nm-applet
+# exec --no-startup-id xss-lock --transfer-sleep-lock --i3lock --nofork
 
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_volume
@@ -40,6 +37,7 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# Mute/Unmute notifications
 bindsym $mod+n exec BLOCK_BUTTON=1 ~/.config/i3/i3blocks-contrib/dunst/dunst && $refresh_mute_notifications
 
 # start dmenu (a program launcher)
@@ -50,6 +48,7 @@ bindsym $mod+n exec BLOCK_BUTTON=1 ~/.config/i3/i3blocks-contrib/dunst/dunst && 
 bindsym $mod+d exec rofi -show "run"
 bindsym $mod+Shift+d exec rofi -show "drun"
 bindsym $mod+Mod2+KP_Subtract exec rofi -show calc
+bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu -p 'clipboard'
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -83,9 +82,6 @@ bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+Shift+v split h
-
-# Clipboard
-bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu -p 'clipboard'
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -199,44 +195,61 @@ mode "exit: [l]ogout, [r]eboot, [s]hutdown, [S]uspend" {
   bindsym Shift+s exec systemctl suspend && i3-msg mode "default"
   bindsym Escape mode "default"
   bindsym Return mode "default"
+  bindsym $mod+Shift+e mode "default"
 }
 
 bindsym $mod+Shift+e mode "exit: [l]ogout, [r]eboot, [s]hutdown, [S]uspend"
 
+# Lock screen
 set $wallpaperLock Imágenes/FONDOS/Paisajes/wallpaperflare.com_wallpaper\(1\).jpg
 bindsym $mod+Shift+x exec convert $wallpaperLock -resize $(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/') RGB:- | i3lock --raw $(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/'):rgb --image /dev/stdin
-# bindsym $mod+Mod2+KP_1 comando # Atajo apretando Alt+1(Numpad) en el teclado numérico
 
 # Restart StatusBar everytime CapsLock gets pressed
 bindsym --release Caps_Lock exec $refresh_caps_lock
 bindsym --release Num_Lock  exec $refresh_caps_lock
 
+# Dunst
 bindsym Control+space exec dunstctl close
 bindsym Control+Shift+space exec dunstctl close-all
 bindsym Control+Shift+period exec dunstctl history-pop
 
+# Screenshots
 bindsym Print exec i3-scrot -d
 bindsym --release Shift+Print exec i3-scrot -s
 bindsym Control+Shift+Print exec i3-scrot -w
 bindsym Control+Print exec thunar ~/Imágenes
 
-# Auto execute app at startup....
+# Zoom/Magnify
+bindsym --release $mod+Shift+z exec xmag
+bindsym --release $mod+z exec rm /tmp/img.png & scrot -s -F /tmp/img.png && feh /tmp/img.png
+
+# bindsym $mod+Mod2+KP_1 comando # Atajo apretando Alt+1(Numpad) en el teclado numérico
+
+# Auto execute apps at startup....
 # exec --> Ejecuta al inicio
 # exec_always --> Ejecuta cada vez que inicia o reinicia I3
 # exec app_name
-exec_always feh --bg-scale /home/leo/Imágenes/FONDOS/wallpaper.jpg
+
+# Services
+exec --no-startup-id nm-applet
+exec setxkbmap es
 exec numlockx on
-exec /home/leo/github/My_Scripts/sh/cam0.sh
+exec clipmenud
 exec dunst
+# Scripts
 exec /home/leo/github/My_Scripts/sh/mic-webcam-check/webcamCheck.sh
 exec /home/leo/github/My_Scripts/sh/mic-webcam-check/micCheck.sh
+exec /home/leo/github/My_Scripts/sh/cam0.sh
+# Others
+exec_always feh --bg-scale /home/leo/Imágenes/FONDOS/wallpaper.jpg
 exec_always ffplay ~/.config/i3/sounds/login.ogg -autoexit -nodisp -loglevel quiet
 exec /home/leo/.config/i3/i3-battery-popup/i3-battery-popup -n -i "battery-020"
-exec clipmenud
-exec setxkbmap es
 
-## Assign
+# Window rules
 assign [class="ffplay"] $workspace4
+
+for_window [class="Yad"] floating enable
+for_window [class="Xmag"] floating enable
 # for_window [class="XXX"] floating enabled
 
 # TokioNight
@@ -279,5 +292,3 @@ bar {
     urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
   }
 }
-
-for_window [class="Yad"] floating enable
