@@ -181,8 +181,8 @@ bindsym $mod+Next  exec amixer -q set Master 5%- && $refresh_volume
 bindsym $mod+Prior exec amixer -q set Master 5%+ && $refresh_volume
 
 # Subir y bajar el brillo con Home y End
-bindsym $mod+Home exec xbacklight -inc 10 || ~/.config/i3/i3-brightness.sh -inc
-bindsym $mod+End  exec xbacklight -dec 10 || ~/.config/i3/i3-brightness.sh -dec
+bindsym $mod+Home exec xbacklight -inc 10 || ~/.config/i3/brightnessControl.sh -inc
+bindsym $mod+End  exec xbacklight -dec 10 || ~/.config/i3/brightnessControl.sh -dec
 
 # Modo de salir
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
