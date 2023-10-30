@@ -195,6 +195,7 @@ mode "exit: [l]ogout, [r]eboot, [s]hutdown, [S]uspend" {
   bindsym Shift+s exec systemctl suspend && i3-msg mode "default"
   bindsym Escape mode "default"
   bindsym Return mode "default"
+  bindsym $mod+Shift+e mode "default"
 }
 
 bindsym $mod+Shift+e mode "exit: [l]ogout, [r]eboot, [s]hutdown, [S]uspend"
