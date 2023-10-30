@@ -8,7 +8,7 @@ if [ -z "$JUMP" ]; then
   JUMP="0.2"
 fi
 
-CURRENT_BRIGHTNESS=$(xrandr --prop --verbose | grep -A10 " connected" | grep "Brightness" | awk '{print $2}')
+CURRENT_BRIGHTNESS=$(xrandr --prop --verbose | grep -A10 "$OUTPUT" | grep "Brightness" | awk '{print $2}')
 
 if [ "$1" = "-inc" ]; then
   xrandr --output $OUTPUT --brightness $(echo "$CURRENT_BRIGHTNESS $JUMP" | awk '{print $1+$2}')
