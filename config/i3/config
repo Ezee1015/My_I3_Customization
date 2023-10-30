@@ -181,8 +181,8 @@ bindsym $mod+Next  exec amixer -q set Master 5%- && $refresh_volume
 bindsym $mod+Prior exec amixer -q set Master 5%+ && $refresh_volume
 
 # Subir y bajar el brillo con Home y End
-bindsym $mod+Home exec i3-nagbar -t warning -m "NO IMPLEMENTADO: Subir brillo"
-bindsym $mod+End exec i3-nagbar -t warning -m "NO IMPLEMENTADO: Bajar brillo"
+bindsym $mod+Home exec ~/.config/i3/i3-brightness.sh -inc
+bindsym $mod+End  exec ~/.config/i3/i3-brightness.sh -dec
 
 # Modo de salir
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
