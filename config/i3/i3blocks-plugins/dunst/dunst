@@ -36,13 +36,6 @@ if clicked():
     # toggle button click to turn mute on and off
     mute_toggle()
 
-    if muted():
-        sound_file = os.path.expanduser("~/.config/i3/sounds/notificacion-off.ogg")
-    else:
-        sound_file = os.path.expanduser("~/.config/i3/sounds/notificacion-on.ogg")
-    sp.run(["ffplay", sound_file, "-autoexit", "-nodisp", "-loglevel", "quiet"], check=True)
-
-
 
 if muted():
     RTN = {"full_text":"<span font='Font Awesome 5 Free Solid' color='#BE616E'>\uf1f6  <b>Silencio</b></span>"}

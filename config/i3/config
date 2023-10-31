@@ -1,7 +1,7 @@
 set $mod Mod1
 
 # Refresh some widgets
-set $refresh_volume pkill -SIGRTMIN+2 i3blocks && ~/.config/i3/volControl.sh
+set $refresh_volume pkill -SIGRTMIN+2 i3blocks && ~/.config/i3/myScripts/volControl.sh
 set $refresh_caps_lock pkill -SIGRTMIN+10 i3blocks
 set $refresh_mute_notifications pkill -SIGRTMIN+3 i3blocks
 
@@ -38,7 +38,8 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # Mute/Unmute notifications
-bindsym $mod+n exec BLOCK_BUTTON=1 ~/.config/i3/i3blocks-contrib/dunst/dunst && $refresh_mute_notifications
+set $notification_change_sound ~/.config/i3/myScripts/notificationSounds.py
+bindsym $mod+n exec BLOCK_BUTTON=1 ~/.config/i3/i3blocks-contrib/dunst/dunst && $refresh_mute_notifications && $notification_change_sound
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
@@ -181,8 +182,8 @@ bindsym $mod+Next  exec amixer -q set Master 5%- && $refresh_volume
 bindsym $mod+Prior exec amixer -q set Master 5%+ && $refresh_volume
 
 # Subir y bajar el brillo con Home y End
-bindsym $mod+Home exec xbacklight -inc 10 || ~/.config/i3/brightnessControl.sh -inc
-bindsym $mod+End  exec xbacklight -dec 10 || ~/.config/i3/brightnessControl.sh -dec
+bindsym $mod+Home exec xbacklight -inc 10 || ~/.config/i3/myScripts/brightnessControl.sh -inc
+bindsym $mod+End  exec xbacklight -dec 10 || ~/.config/i3/myScripts/brightnessControl.sh -dec
 
 # Modo de salir
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
