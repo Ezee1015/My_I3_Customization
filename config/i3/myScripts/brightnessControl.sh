@@ -34,4 +34,6 @@ fi
 
 CURRENT_BRIGHTNESS=$(xrandr --prop --verbose | grep -A10 " connected" | grep "Brightness" | awk '{print $2}')
 BRIGHTNESS_PERCENTAGE=$(echo "$CURRENT_BRIGHTNESS 100" | awk '{print $1*$2}')
-dunstify -a "Script de brillo" -u low -r 9993 -h int:value:"$BRIGHTNESS_PERCENTAGE" -i "redshift-status-day" "Brillo: " -t 2000
+if [ "$(dunstify -a "Script de brillo" -u low -r 9993 -h int:value:"$BRIGHTNESS_PERCENTAGE" -i "redshift-status-day" "Brillo: " -t 2000 -A "default,Reset brightness")" = "default" ]; then
+  xrandr --output $OUTPUT --brightness 1.0
+fi
