@@ -55,7 +55,7 @@ My I3 bare minimum customization to get it working just like I need
 |       **`Control + Espacio`**       | Cierra la notificación                                          |
 |   **`Control + Shift + Espacio`**   | Cierra todas las notificaciones                                 |
 |      **`Control + Shift + .`**      | Abre la última notificación                                     |
-|          **`Control + .`**          | Abre el menú de acciones (no funciona)                          |
+|          **`Control + .`**          | Abre el menú de acciones                                        |
 |            **`MOD + n`**            | Habilita y Deshabilita (silencia y suspende) las notificaciones |
 | **`Click - Mouse botón izquierdo`** | Abre el menú de acciones                                        |
 |    **`Click - Rueda del mouse`**    | Ejecuta la accion por default                                   |
