@@ -5,7 +5,7 @@ if [ -z "$OUTPUT" ]; then
 fi
 
 if [ -z "$JUMP" ]; then
-  JUMP="0.2"
+  JUMP="0.1"
 fi
 
 CURRENT_BRIGHTNESS=$(xrandr --prop --verbose | grep -A10 "$OUTPUT" | grep "Brightness" | awk '{print $2}')
