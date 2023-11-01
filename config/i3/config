@@ -238,6 +238,7 @@ exec setxkbmap es
 exec numlockx on
 exec clipmenud
 exec dunst
+exec kdeconnect-indicator
 # Scripts
 exec /home/leo/github/My_Scripts/sh/mic-webcam-check/webcamCheck.sh
 exec /home/leo/github/My_Scripts/sh/mic-webcam-check/micCheck.sh
