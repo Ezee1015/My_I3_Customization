@@ -50,12 +50,16 @@ My I3 bare minimum customization to get it working just like I need
 
 ### Dunst (notificaciones)
 
-|              Atajo              | Función                                                         |
-|:-------------------------------:|-----------------------------------------------------------------|
-|     **`Control + Espacio`**     | Cierra la notificación                                          |
-| **`Control + Shift + Espacio`** | Cierra todas las notificaciones                                 |
-|    **`Control + Shift + .`**    | Abre la última notificación                                     |
-|          **`MOD + n`**          | Habilita y Deshabilita (silencia y suspende) las notificaciones |
+|                Atajo                | Función                                                         |
+|:-----------------------------------:|-----------------------------------------------------------------|
+|       **`Control + Espacio`**       | Cierra la notificación                                          |
+|   **`Control + Shift + Espacio`**   | Cierra todas las notificaciones                                 |
+|      **`Control + Shift + .`**      | Abre la última notificación                                     |
+|          **`Control + .`**          | Abre el menú de acciones (no funciona)                          |
+|            **`MOD + n`**            | Habilita y Deshabilita (silencia y suspende) las notificaciones |
+| **`Click - Mouse botón izquierdo`** | Abre el menú de acciones                                        |
+|    **`Click - Rueda del mouse`**    | Ejecuta la accion por default                                   |
+|  **`Click - Mouse botón derecho`**  | Cierra notificación                                             |
 
 ### Custom
 
