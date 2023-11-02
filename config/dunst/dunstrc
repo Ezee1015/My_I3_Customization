@@ -277,7 +277,7 @@
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#2b2b2b"
     foreground = "#ffffff"
-    timeout = 5
+    timeout = 8
     # Icon for notifications with low urgency, uncomment to enable
     icon = ~/.config/dunst/icons/normal.png
     # script = ~/.config/dunst/normal_notification.sh
@@ -285,7 +285,7 @@
 [urgency_normal]
     background = "#2b2b2b"
     foreground = "#ffffff"
-    timeout = 5
+    timeout = 8
     # Icon for notifications with normal urgency, uncomment to enable
     icon = ~/.config/dunst/icons/normal.png
     script = ~/.config/dunst/normal_notification.sh
@@ -294,7 +294,7 @@
     background = "#900000"
     foreground = "#ffffff"
     frame_color = "#ff0000"
-    timeout = 5
+    timeout = 15
     # Icon for notifications with critical urgency, uncomment to enable
     icon = ~/.config/dunst/icons/critical.png
     script = ~/.config/dunst/critical_notification.sh
