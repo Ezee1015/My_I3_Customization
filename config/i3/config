@@ -191,8 +191,8 @@ mode "exit: [l]ogout, [r]eboot, [s]hutdown, [S]uspend" {
   set $shutdown_music ffplay ~/.config/i3/sounds/logout.ogg -autoexit -nodisp -loglevel quiet
 
   bindsym l exec $shutdown_music && i3-msg exit
-  bindsym r exec $shutdown_music && reboot
-  bindsym s exec $shutdown_music && shutdown now
+  bindsym r exec $shutdown_music && systemctl reboot
+  bindsym s exec $shutdown_music && systemctl poweroff
   bindsym Shift+s exec systemctl suspend && i3-msg mode "default"
   bindsym Escape mode "default"
   bindsym Return mode "default"
