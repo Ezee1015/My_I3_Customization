@@ -240,13 +240,13 @@ exec clipmenud
 exec dunst
 exec kdeconnect-indicator
 # Scripts
-exec /home/leo/github/My_Scripts/sh/mic-webcam-check/webcamCheck.sh
-exec /home/leo/github/My_Scripts/sh/mic-webcam-check/micCheck.sh
-exec /home/leo/github/My_Scripts/sh/cam0.sh
+exec ~/github/My_Scripts/sh/mic-webcam-check/webcamCheck.sh
+exec ~/github/My_Scripts/sh/mic-webcam-check/micCheck.sh
+exec ~/github/My_Scripts/sh/cam0.sh
 # Others
 exec_always feh --bg-scale ~/Imágenes/FONDOS/wallpaper.jpg
 exec_always ffplay ~/.config/i3/sounds/login.ogg -autoexit -nodisp -loglevel quiet
-exec /home/leo/.config/i3/i3-battery-popup/i3-battery-popup -n -i "battery-020"
+exec ~/.config/i3/i3-battery-popup/i3-battery-popup -n -i "battery-020"
 
 # Window rules
 assign [class="ffplay"] $workspace4
