@@ -18,3 +18,9 @@ fi
 if [ ! -z "$music_file" ]; then
   echo "♪ $music_file"
 fi
+
+# If right click
+if [ "$BLOCK_BUTTON" = "1" ]; then
+  # Focus window with mpv
+  xdotool search --name "MPV - " windowactivate
+fi
