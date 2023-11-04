@@ -25,6 +25,11 @@ case $BLOCK_BUTTON in
       xdotool search --name "MPV - " key space
     fi
     ;;
+  2) # wheel click - Quit MPV
+    if [ $file_count -eq 1 ]; then
+      xdotool search --name "MPV - " key q
+    fi
+    ;;
   3) # right click - Focus window with mpv
     xdotool search --name "MPV - " windowactivate
     ;;
