@@ -28,4 +28,14 @@ case $BLOCK_BUTTON in
   3) # right click - Focus window with mpv
     xdotool search --name "MPV - " windowactivate
     ;;
+  4) # scroll up   - Increase volume of MPV
+    if [ $file_count -eq 1 ]; then
+      xdotool search --name "MPV - " key k
+    fi
+    ;;
+  5) # scroll down - Decrease volume of MPV
+    if [ $file_count -eq 1 ]; then
+      xdotool search --name "MPV - " key j
+    fi
+    ;;
 esac
