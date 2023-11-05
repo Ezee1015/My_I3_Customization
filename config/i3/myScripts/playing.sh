@@ -18,14 +18,16 @@ case $BLOCK_BUTTON in
   3) # right click - Focus window with mpv
     xdotool search --name "MPV - " windowactivate
     ;;
-  4) # scroll up   - Increase volume of MPV
+  4) # scroll up   - Next song of playlist of MPV
     if [ $file_count -eq 1 ]; then
-      xdotool search --name "MPV - " key k
+      xdotool search --name "MPV - " key l
+      sleep 0.25
     fi
     ;;
-  5) # scroll down - Decrease volume of MPV
+  5) # scroll down - Previous song of playlist of MPV
     if [ $file_count -eq 1 ]; then
-      xdotool search --name "MPV - " key j
+      xdotool search --name "MPV - " key h
+      sleep 0.25
     fi
     ;;
 esac
