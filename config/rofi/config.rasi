@@ -1,4 +1,5 @@
-@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+//@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+@import "/usr/share/rofi/themes/gruvbox-dark.rasi"
 configuration {
   modi: "run,drun,calc";
   kb-row-up:                      "Up,Control+k,Shift+Tab,Shift+ISO_Left_Tab";
