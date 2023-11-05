@@ -1,27 +1,7 @@
 #!/bin/bash
 music_file=""
-file_count=0
 pids=$(xdotool search --name "MPV - ")
-
-for pid in $pids; do
-  file_count=$(expr $file_count + 1)
-  music_file=$(xdotool getwindowname $pid | cut -c 7-)
-done
-
-# Indicate if there's more than one file playing
-if [ $file_count -gt 1 ]; then
-  music_file="[$file_count] $music_file"
-fi
-
-# Cut music file name if it's too long
-if [ ${#music_file} -gt 63 ]; then
-  music_file="${music_file:0:60}..."
-fi
-
-# Put icon at the beginning if music is playing
-if [ ! -z "$music_file" ]; then
-  echo "♪ $music_file"
-fi
+file_count=$(xdotool search --name "MPV - " | wc -l)
 
 # Mouse actions
 case $BLOCK_BUTTON in
@@ -49,3 +29,25 @@ case $BLOCK_BUTTON in
     fi
     ;;
 esac
+
+# Search for MPV names
+for pid in $pids; do
+  music_file=$(xdotool getwindowname $pid | cut -c 7-)
+done
+
+# Put a music icon at the beginning if music is playing and it's not paused
+if [ ! -z "$music_file" ] & [ "$(echo $music_file | awk '{print $1}')" != "󰐎" ]; then
+  music_file="♪  $music_file"
+fi
+
+# Indicate if there's more than one file playing
+if [ $file_count -gt 1 ]; then
+  music_file="[$file_count] $music_file"
+fi
+
+# Cut music file name if it's too long
+if [ ${#music_file} -gt 63 ]; then
+  echo "${music_file:0:60}..."
+else
+  echo "$music_file"
+fi
