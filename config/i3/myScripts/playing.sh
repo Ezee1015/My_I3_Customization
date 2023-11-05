@@ -36,7 +36,7 @@ for pid in $pids; do
 done
 
 # Put a music icon at the beginning if music is playing and it's not paused
-if [ ! -z "$music_file" ] & [ "$(echo $music_file | awk '{print $1}')" != "󰐎" ]; then
+if [ ! -z "$music_file" ] && [ "$(echo $music_file | awk '{print $1}')" != "󰐎" ]; then
   music_file="♪  $music_file"
 fi
 
