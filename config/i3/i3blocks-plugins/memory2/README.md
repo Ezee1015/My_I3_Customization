@@ -17,10 +17,10 @@ make
 
 ### Config
 ```ini
-[memory2] 
+[memory2]
 interval=persist
 markup=pango
-bar_chars=_▁▂▃▄▅▆▇█ 
+bar_chars=_▁▂▃▄▅▆▇█
 #bar_size=10
 #critical=80
 #warning=50
@@ -31,7 +31,7 @@ bar_chars=_▁▂▃▄▅▆▇█
 E.g.
 ```ini
 [memory2]
-label= 
+label=
 interval=persist
 markup=pango
 bar_chars=_▏▎▍▌▋▊▉██
