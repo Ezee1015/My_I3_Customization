@@ -16,7 +16,7 @@ elif [ "$1" = "-dec" ]; then
   xrandr --output $OUTPUT --brightness $(echo "$CURRENT_BRIGHTNESS $JUMP" | awk '{print $1-$2}')
 elif [ "$1" = "-reset" ]; then
   xrandr --output $OUTPUT --brightness 1.0
-elif [ "$1" = "-set" ] & [ ! -z "$2" ]; then
+elif [ "$1" = "-set" ] && [ ! -z "$2" ]; then
   xrandr --output $OUTPUT --brightness $2
 else
   echo "HELP MANUAL\n"
