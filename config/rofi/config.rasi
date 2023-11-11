@@ -14,3 +14,5 @@ configuration {
   show-icons: true;
   drun-icon-theme: "breeze-dark";
 }
+
+// Keyboard shortcuts: https://davatorium.github.io/rofi/current/rofi-keys.5/
