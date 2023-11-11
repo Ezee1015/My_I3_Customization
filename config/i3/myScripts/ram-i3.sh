@@ -1,20 +1,26 @@
 if [ -z $TRESSHOLD ]; then
-  TRESSHOLD=$(free | grep Mem | awk '{print $2/2}')=
-  echo "set"
+  TRESSHOLD=$(free | grep Mem | awk '{print $2/2}')
+  URGENCY=$(free | grep Mem | awk '{print $2/4*3}')
 fi
 
-if [ -z $COLOR ]; then
-  COLOR="#33ff33"
+if [ -z $TRESS_COLOR ]; then
+  TRESS_COLOR="#fabd2f"
 fi
-
-HTML_COLOR="<span color=\"$COLOR\">"
-HTML_COLOR_END='</span>'
+if [ -z $URGENT_COLOR ]; then
+  URGENT_COLOR="#cc241d"
+fi
 
 FREE_HUMAN=$(free -h | grep Mem | awk '{print $3}')
 FREE_BYTES=$(free | grep Mem | awk '{print $3}')
 
-if [ $FREE_BYTES -gt $TRESSHOLD ]; then
-  echo "$HTML_COLOR$LABEL  $FREE_HUMAN$HTML_COLOR_END"
+HTML_URGENT_COLOR="<span color=\"$URGENT_COLOR\">"
+HTML_TRESS_COLOR="<span color=\"$TRESS_COLOR\">"
+HTML_COLOR_END='</span>'
+
+if [ $FREE_BYTES -gt $URGENCY ]; then
+  echo "$HTML_URGENT_COLOR$LABEL  $FREE_HUMAN$HTML_COLOR_END"
+elif [ $FREE_BYTES -gt $TRESSHOLD ]; then
+  echo "$HTML_TRESS_COLOR$LABEL  $FREE_HUMAN$HTML_COLOR_END"
 else
   echo "$LABEL  $FREE_HUMAN"
 fi
