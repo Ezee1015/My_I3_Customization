@@ -67,6 +67,7 @@ My I3 bare minimum customization to get it working just like I need
 |:-----------------------------------:|-------------------------------------------|
 |        **`MOD + Shift + x`**        | Bloquea la pantalla                       |
 |        **`MOD + Shift + d`**        | Abre `rofi` en busca de archivos .desktop |
+|            **`MOD + -`**            | Abre `rofi` en en modo calculadora        |
 |            **`MOD + c`**            | Abre el historial del portapapeles        |
 |          **`PrintScreen`**          | Screenshot de la pantalla enter           |
 |      **`Shift + PrintScreen`**      | Screenshot de una región seleccionada     |
