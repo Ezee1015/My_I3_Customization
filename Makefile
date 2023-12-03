@@ -36,6 +36,8 @@ install:
 		exit 1;                                                              \
 	fi
 	@cp -r ${REPO_CONFIG_DIR}/* ${LOCAL_CONFIG_DIR}/
+	# Qt theme control is `qt5ct`. Change to qt6ct when using Qt 6
+	@echo "QT_QPA_PLATFORMTHEME=qt5ct" | sudo tee -a /etc/environment
 
 # Updates and send to the repository the lua files
 send:
