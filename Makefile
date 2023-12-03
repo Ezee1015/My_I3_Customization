@@ -42,6 +42,8 @@ install:
 # Updates and send to the repository the lua files
 send:
 	$(info Enviando...)
+	# Actualiza repo
+	@git pull
 	# Elimina configuración del repo
 	@rm -rf ${REPO_CONFIG_DIR}/*
 	# Copia la configuración
