@@ -46,7 +46,7 @@ bindsym $mod+n exec BLOCK_BUTTON=1 ~/.config/i3/i3blocks-plugins/dunst/dunst && 
 
 # EJECUTAR ESTE COMANDO PARA CAMBIAR EL TEMA A ROFI
 # rofi-theme-selector
-bindsym $mod+d exec rofi -show "run"
+bindsym $mod+d exec PATH="$PATH:$HOME/github/My_Scripts/sh/apps" rofi -show "run"
 bindsym $mod+Shift+d exec rofi -show "drun"
 bindsym $mod+Mod2+KP_Subtract exec rofi -show calc -calc-command "echo '{result}' | tr -d '\n' | xclip -selection clipboard"
 bindsym $mod+minus exec rofi -show calc -calc-command "echo '{result}' | tr -d '\n' | xclip -selection clipboard"
