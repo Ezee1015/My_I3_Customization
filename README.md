@@ -90,6 +90,17 @@ WM_CLASS(STRING) = "YYY", "XXX"
 ``
 5. Poner en el config de i3: `assign [class="XXX"] $workspace10`
 
+## Para cambiar la apariencia de las Apps Qt
+> Cuando haga el cambio KDE a **Qt 6**, cambiar `qt5ct` a `qt6ct` en `/etc/enviroment` (Y actualizar cuando *setea* la variable en el Makefile. Por si las dudas, el makefile ya instala qt6ct)
+
+1. Entrar en I3WM
+2. Ejecutar `qt5ct` o `qt6ct`
+3. Cambiar las configuraciones a gusto
+4. Cerrar sesión
+5. Iniciar en KDE Plasma
+6. Repetir la configuración
+7. Cerrar sesión e Iniciar en I3WM
+
 ## Dependencias incluidas en este repo (agradecimientos)
 Fuentes:
 - <https://invent.kde.org/plasma/ocean-sound-theme> (audios)
