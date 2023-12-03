@@ -5,8 +5,8 @@ LOCAL_CONFIG_DIR=~/.config
 CONFIG_FOLDERS=dunst rofi i3 feh
 PLUGIN_CONFIG_FILES=dunst/dunstrc rofi/config.rasi i3/i3blocks.conf i3/config i3/weather.sh i3/volControl.sh feh/buttons
 
-APT_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance pavucontrol dunst nm-tray perl lm-sensors thunar breeze-icon-theme ffmpeg scrot gvfs rofi-dev qalc libtool libxfixes-dev xsel
-PACMAN_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance rofi-calc i3blocks pavucontrol dunst network-manager-applet perl lm-sensors thunar breeze-icons clipmenu ffmpeg scrot i3-scrot gvfs ttf-hack-nerd
+APT_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance pavucontrol dunst nm-tray perl lm-sensors thunar breeze-icon-theme ffmpeg scrot gvfs rofi-dev qalc libtool libxfixes-dev xsel qt5ct qt6ct
+PACMAN_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance rofi-calc i3blocks pavucontrol dunst network-manager-applet perl lm-sensors thunar breeze-icons clipmenu ffmpeg scrot i3-scrot gvfs ttf-hack-nerd qt5ct qt6ct
 
 COMPILE_SCROT=git clone https://gitlab.manjaro.org/packages/community/i3/i3-scrot && sudo cp i3-scrot/i3-scrot /usr/bin/
 REMOVE_HACK_FOLDER=sudo rm -r /usr/share/fonts/truetype/hack
