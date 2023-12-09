@@ -30,7 +30,7 @@ install:
 		cd ${REPO_DIR}/compiled && ${COMPILE_CLIPMENU};              				 \
 		cd ${REPO_DIR}/compiled && ${COMPILE_ROFICALC};              				 \
 		cd ${REPO_DIR}/compiled && ${COMPILE_I3BLOCKS};              				 \
-		mkdir ~/github && cd ~/github && ${COMPILE_ZOOMME};              		 \
+		mkdir -p ~/github && cd ~/github && ${COMPILE_ZOOMME};               \
 	elif [ "$(DISTRO)" = "arch" ] || [ "$(DISTRO)" = "manjaro" ]; then     \
 		sudo pacman -S ${PACMAN_PACKAGES};                                   \
 	else                                                                   \
