@@ -224,8 +224,8 @@ bindsym Control+Shift+Print exec i3-scrot -w
 bindsym Control+Print exec thunar ~/Imágenes
 
 # Zoom/Magnify
-bindsym --release $mod+Shift+z exec xmag
-bindsym --release $mod+z exec rm /tmp/img.png & scrot -s -F /tmp/img.png && feh /tmp/img.png
+bindsym --release $mod+z exec ~/github/zoomme/zoomme
+bindsym --release $mod+Shift+z exec rm /tmp/img.png & scrot -s -F /tmp/img.png && feh /tmp/img.png
 
 # bindsym $mod+Mod2+KP_1 comando # Atajo apretando Alt+1(Numpad) en el teclado numérico
 
