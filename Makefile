@@ -30,13 +30,13 @@ install:
 		cd ${REPO_DIR}/compiled && ${COMPILE_CLIPMENU};              				 \
 		cd ${REPO_DIR}/compiled && ${COMPILE_ROFICALC};              				 \
 		cd ${REPO_DIR}/compiled && ${COMPILE_I3BLOCKS};              				 \
-		mkdir -p ~/github && cd ~/github && ${COMPILE_ZOOMME};               \
 	elif [ "$(DISTRO)" = "arch" ] || [ "$(DISTRO)" = "manjaro" ]; then     \
 		sudo pacman -S ${PACMAN_PACKAGES};                                   \
 	else                                                                   \
 		echo "[Error] Distro not recognized";                                \
 		exit 1;                                                              \
 	fi
+	@mkdir -p ~/github && cd ~/github && ${COMPILE_ZOOMME};
 	@cp -r ${REPO_CONFIG_DIR}/* ${LOCAL_CONFIG_DIR}/
 	# Qt theme control is `qt5ct`. Change to qt6ct when using Qt 6
 	@echo "QT_QPA_PLATFORMTHEME=qt5ct" | sudo tee -a /etc/environment
