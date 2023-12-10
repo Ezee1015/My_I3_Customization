@@ -20,7 +20,7 @@ COMPILE_ZOOMME=git clone https://github.com/ezee1015/zoomme && cd zoomme && qmak
 # Updates and install the lua files from the repository
 install:
 	$(eval DISTRO=$(shell cat /etc/os-release | grep "^ID=" | awk -F= '{print $$2}'))
-	@if [ "$(DISTRO)" = "debian" ]  || [ "$(DISTRO)" = "linuxmint" ]; then  \
+	@if [ "$(DISTRO)" = "debian" ]  || [ "$(DISTRO)" = "linuxmint" ]; then \
 		sudo apt install ${APT_PACKAGES};                                    \
 		mkdir compiled ;             	    																	 \
 		cd ${REPO_DIR}/compiled && ${COMPILE_SCROT};                 				 \
