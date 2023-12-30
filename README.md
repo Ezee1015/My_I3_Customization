@@ -11,6 +11,8 @@ My I3 bare minimum customization to get it working just like I need
 |:---------------------------:|-------------------------------------------------------------------------------------------|
 |      **`MOD + [hjkl]`**     | Seleccionar la ventana de la izquierda, abajo, arriba o derecha                           |
 |  **`MOD + Shift + [hjkl]`** | Mover la ventana a la izquierda, abajo, arriba o derecha                                  |
+|       **`MOD + Tab`**       | Seleccionar la ventana de la derecha                                                      |
+|   **`MOD + Shift + Tab`**   | Seleccionar la ventana de la izquierda                                                    |
 |        **`MOD + r`**        | Cambia el tamaño de las ventanas. Se puede usar [hjkl] para mover                         |
 |        **`MOD + f`**        | Convierte la ventana en *fullscreen*. Presione de vuelta para volver a la normalidad      |
 |        **`MOD + v`**        | Indica que la próxima ventana se creará verticalmente                                     |
