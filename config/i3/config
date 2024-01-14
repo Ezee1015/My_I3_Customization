@@ -241,6 +241,7 @@ exec --no-startup-id nm-applet
 exec setxkbmap es
 exec numlockx on
 exec clipmenud
+exec xfce4-clipman
 exec dunst
 exec kdeconnect-indicator
 # Scripts
