@@ -237,6 +237,8 @@ bindsym --release $mod+Shift+z exec rm /tmp/img.png & scrot -s -F /tmp/img.png &
 # exec app_name
 
 # Services
+# KDE authentication dialog
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 exec --no-startup-id nm-applet
 exec setxkbmap es
 exec numlockx on
