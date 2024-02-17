@@ -5,7 +5,7 @@ set $refresh_volume pkill -SIGRTMIN+2 i3blocks && ~/.config/i3/myScripts/volCont
 set $refresh_caps_lock pkill -SIGRTMIN+10 i3blocks
 set $refresh_mute_notifications pkill -SIGRTMIN+3 i3blocks
 
-font pango:hack 9
+font pango:hackNerdFont 9
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
