@@ -3,6 +3,9 @@ music_file=""
 pids=$(xdotool search --name "MPV - ")
 file_count=$(xdotool search --name "MPV - " | wc -l)
 
+# xdotool problem with alacritty
+#  - https://unix.stackexchange.com/questions/740864/xdotool-window-function-doesnt-work
+
 # Mouse actions
 case $BLOCK_BUTTON in
   1) # left click  - Pause music only if there's one mpv instance
