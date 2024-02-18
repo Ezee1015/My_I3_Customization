@@ -241,9 +241,9 @@ bindsym --release $mod+Shift+z exec rm /tmp/img.png & scrot -s -F /tmp/img.png &
 # KDE authentication dialog
 exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 exec --no-startup-id nm-applet
+exec --no-startup-id PATH="$PATH:/usr/local/bin/" clipmenud
 exec setxkbmap es
 exec numlockx on
-exec clipmenud
 exec xfce4-clipman
 exec dunst
 exec kdeconnect-indicator
