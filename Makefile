@@ -12,25 +12,25 @@ COMPILE_SCROT=sudo cp i3-scrot/i3-scrot /usr/bin/
 REMOVE_HACK_FOLDER=sudo rm -r /usr/share/fonts/truetype/hack
 # INSTALL_HACK_FONT=wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.tar.xz && sudo mkdir /usr/share/fonts/truetype/hack && sudo tar -xf Hack.tar.xz -C /usr/share/fonts/truetype/hack
 INSTALL_HACK_FONT=wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.tar.xz && sudo mkdir /usr/share/fonts/truetype/hack && sudo tar -xf Hack.tar.xz -C /usr/share/fonts/truetype/hack
-COMPILE_CLIPNOTIFY=cd clipnotify && make && sudo make install
-COMPILE_CLIPMENU=cd clipmenu && sudo make install
-COMPILE_ROFICALC=cd rofi-calc/ && mkdir m4 && autoreconf -i && mkdir build && cd build/ && ../configure && make && sudo make install
-COMPILE_I3BLOCKS=cd i3blocks && ./autogen.sh && ./configure && make && sudo make install
+COMPILE_CLIPNOTIFY=make && sudo make install
+COMPILE_CLIPMENU=sudo make install
+COMPILE_ROFICALC=mkdir m4 && autoreconf -i && mkdir build && cd build/ && ../configure && make && sudo make install
+COMPILE_I3BLOCKS=./autogen.sh && ./configure && make && sudo make install
 COMPILE_ZOOMME=git clone https://github.com/ezee1015/zoomme && cd zoomme && qmake -makefile zoomme.pro && make
 
 # Updates and install the lua files from the repository
 install:
 	$(eval DISTRO=$(shell cat /etc/os-release | grep "^ID=" | awk -F= '{print $$2}'))
-	@if [ "$(DISTRO)" = "debian" ]  || [ "$(DISTRO)" = "linuxmint" ]; then \
+	 if [ "$(DISTRO)" = "debian" ]  || [ "$(DISTRO)" = "linuxmint" ]; then \
 		sudo apt install ${APT_PACKAGES};                                    \
 		mkdir compiled ;             	    																	 \
-		cd ${REPO_DIR}/compiled && ${COMPILE_SCROT};                 				 \
-		cd ${REPO_DIR}/compiled && ${REMOVE_HACK_FOLDER};            				 \
-		cd ${REPO_DIR}/compiled && ${INSTALL_HACK_FONT};             				 \
-		cd ${REPO_DIR}/compiled && ${COMPILE_CLIPNOTIFY};            				 \
-		cd ${REPO_DIR}/compiled && ${COMPILE_CLIPMENU};              				 \
-		cd ${REPO_DIR}/compiled && ${COMPILE_ROFICALC};              				 \
-		cd ${REPO_DIR}/compiled && ${COMPILE_I3BLOCKS};              				 \
+		${COMPILE_SCROT};                                           				 \
+		${REMOVE_HACK_FOLDER};                                       				 \
+		cd ${REPO_DIR}/compiled            && ${INSTALL_HACK_FONT};  				 \
+		cd ${REPO_DIR}/compiled/clipnotify && ${COMPILE_CLIPNOTIFY}; 				 \
+		cd ${REPO_DIR}/compiled/clipmenu   && ${COMPILE_CLIPMENU};   				 \
+		cd ${REPO_DIR}/compiled/rofi-calc  && ${COMPILE_ROFICALC};   				 \
+		cd ${REPO_DIR}/compiled/i3blocks  && ${COMPILE_I3BLOCKS};  				   \
 	elif [ "$(DISTRO)" = "arch" ] || [ "$(DISTRO)" = "manjaro" ]; then     \
 		sudo pacman -S ${PACMAN_PACKAGES};                                   \
 	else                                                                   \
