@@ -5,7 +5,7 @@ LOCAL_CONFIG_DIR=~/.config
 CONFIG_FOLDERS=dunst rofi i3 feh
 PLUGIN_CONFIG_FILES=dunst/dunstrc rofi/config.rasi i3/i3blocks.conf i3/config i3/weather.sh i3/volControl.sh feh/buttons
 
-APT_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance pavucontrol dunst nm-tray perl lm-sensors thunar breeze-icon-theme ffmpeg scrot gvfs rofi-dev qalc libtool libxfixes-dev xsel qt5ct qt6ct build-essential qt5-qmake qtbase5-dev xfce4-clipman-plugin acpi network-manager-gnome
+APT_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance pavucontrol dunst perl lm-sensors thunar breeze-icon-theme ffmpeg scrot gvfs rofi-dev qalc libtool libxfixes-dev xsel qt5ct qt6ct build-essential qt5-qmake qtbase5-dev xfce4-clipman-plugin acpi network-manager-gnome
 PACMAN_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance rofi-calc i3blocks pavucontrol dunst network-manager-applet perl i2c-tools thunar breeze-icons clipmenu ffmpeg scrot i3-scrot gvfs ttf-hack-nerd qt5ct qt6ct base-devel qt5-base xfce4-clipman-plugin
 
 COMPILE_SCROT=sudo cp i3-scrot/i3-scrot /usr/bin/
