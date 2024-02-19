@@ -1,0 +1,15 @@
+[submodule "compiled/clipmenu"]
+	path = compiled/clipmenu
+	url = https://github.com/cdown/clipmenu
+[submodule "compiled/clipnotify"]
+	path = compiled/clipnotify
+	url = https://github.com/cdown/clipnotify
+[submodule "compiled/rofi-calc"]
+	path = compiled/rofi-calc
+	url = https://github.com/svenstaro/rofi-calc
+[submodule "compiled/i3blocks"]
+	path = compiled/i3blocks
+	url = https://github.com/vivien/i3blocks
+[submodule "compiled/i3-scrot"]
+	path = compiled/i3-scrot
+	url = https://gitlab.manjaro.org/packages/community/i3/i3-scrot
