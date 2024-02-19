@@ -8,13 +8,14 @@ PLUGIN_CONFIG_FILES=dunst/dunstrc rofi/config.rasi i3/i3blocks.conf i3/config i3
 APT_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance pavucontrol dunst nm-tray perl lm-sensors thunar breeze-icon-theme ffmpeg scrot gvfs rofi-dev qalc libtool libxfixes-dev xsel qt5ct qt6ct build-essential qt5-qmake qtbase5-dev xfce4-clipman-plugin acpi network-manager-gnome
 PACMAN_PACKAGES=i3-wm rofi i3lock feh numlockx lxappearance rofi-calc i3blocks pavucontrol dunst network-manager-applet perl i2c-tools thunar breeze-icons clipmenu ffmpeg scrot i3-scrot gvfs ttf-hack-nerd qt5ct qt6ct base-devel qt5-base xfce4-clipman-plugin
 
-COMPILE_SCROT=git clone https://gitlab.manjaro.org/packages/community/i3/i3-scrot && sudo cp i3-scrot/i3-scrot /usr/bin/
+COMPILE_SCROT=sudo cp i3-scrot/i3-scrot /usr/bin/
 REMOVE_HACK_FOLDER=sudo rm -r /usr/share/fonts/truetype/hack
-INSTALL_HACK_FONT=wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.tar.xz && sudo mkdir /usr/share/fonts/truetype/hack && sudo tar -xf Hack.tar.xz -C /usr/share/fonts/truetype/hack
-COMPILE_CLIPNOTIFY=git clone https://github.com/cdown/clipnotify && cd clipnotify && make && sudo make install
-COMPILE_CLIPMENU=git clone https://github.com/cdown/clipmenu && cd clipmenu && sudo make install
-COMPILE_ROFICALC=git clone https://github.com/svenstaro/rofi-calc.git && cd rofi-calc/ && mkdir m4 && autoreconf -i && mkdir build && cd build/ && ../configure && make && sudo make install
-COMPILE_I3BLOCKS=git clone https://github.com/vivien/i3blocks && cd i3blocks && ./autogen.sh && ./configure && make && sudo make install
+# INSTALL_HACK_FONT=wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.tar.xz && sudo mkdir /usr/share/fonts/truetype/hack && sudo tar -xf Hack.tar.xz -C /usr/share/fonts/truetype/hack
+INSTALL_HACK_FONT=wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.tar.xz && sudo mkdir /usr/share/fonts/truetype/hack && sudo tar -xf Hack.tar.xz -C /usr/share/fonts/truetype/hack
+COMPILE_CLIPNOTIFY=cd clipnotify && make && sudo make install
+COMPILE_CLIPMENU=cd clipmenu && sudo make install
+COMPILE_ROFICALC=cd rofi-calc/ && mkdir m4 && autoreconf -i && mkdir build && cd build/ && ../configure && make && sudo make install
+COMPILE_I3BLOCKS=cd i3blocks && ./autogen.sh && ./configure && make && sudo make install
 COMPILE_ZOOMME=git clone https://github.com/ezee1015/zoomme && cd zoomme && qmake -makefile zoomme.pro && make
 
 # Updates and install the lua files from the repository
@@ -36,10 +37,10 @@ install:
 		echo "[Error] Distro not recognized";                                \
 		exit 1;                                                              \
 	fi
-	@mkdir -p ~/github && cd ~/github && ${COMPILE_ZOOMME};
 	@cp -r ${REPO_CONFIG_DIR}/* ${LOCAL_CONFIG_DIR}/
 	# Qt theme control is `qt5ct`. Change to qt6ct when using Qt 6
 	@echo "QT_QPA_PLATFORMTHEME=qt5ct" | sudo tee -a /etc/environment
+	@mkdir -p ~/github && cd ~/github && ${COMPILE_ZOOMME};
 
 # Updates and send to the repository the lua files
 send:
