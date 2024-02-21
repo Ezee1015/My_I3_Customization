@@ -1,12 +1,12 @@
-[submodule "compiled/clipmenu"]
-	path = compiled/clipmenu
-	url = https://github.com/cdown/clipmenu
 [submodule "compiled/clipnotify"]
 	path = compiled/clipnotify
-	url = https://github.com/cdown/clipnotify
-[submodule "compiled/rofi-calc"]
-	path = compiled/rofi-calc
-	url = https://github.com/svenstaro/rofi-calc
+	url = https://github.com/Ezee1015/clipnotify
+[submodule "compiled/clipmenu"]
+	path = compiled/clipmenu
+	url = https://github.com/Ezee1015/clipmenu
 [submodule "compiled/i3blocks"]
 	path = compiled/i3blocks
-	url = https://github.com/vivien/i3blocks
+	url = https://github.com/Ezee1015/i3blocks
+[submodule "compiled/rofi-calc"]
+	path = compiled/rofi-calc
+	url = https://github.com/Ezee1015/rofi-calc
