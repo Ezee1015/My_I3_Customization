@@ -10,6 +10,3 @@
 [submodule "compiled/i3blocks"]
 	path = compiled/i3blocks
 	url = https://github.com/vivien/i3blocks
-[submodule "compiled/i3-scrot"]
-	path = compiled/i3-scrot
-	url = https://gitlab.manjaro.org/packages/community/i3/i3-scrot

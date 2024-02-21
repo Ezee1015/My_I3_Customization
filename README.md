@@ -108,3 +108,4 @@ WM_CLASS(STRING) = "YYY", "XXX"
 ## Dependencias incluidas en este repo (agradecimientos)
 Fuentes:
 - <https://invent.kde.org/plasma/ocean-sound-theme> (audios)
+- <https://gitlab.manjaro.org/packages/community/i3/i3-scrot> (i3-scrot)
