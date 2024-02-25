@@ -240,6 +240,8 @@ bindsym --release $mod+Shift+z exec rm /tmp/img.png & scrot -s -F /tmp/img.png &
 # Services
 # KDE authentication dialog
 exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
+# GNOME authentication dialog
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 exec --no-startup-id PATH="$PATH:/usr/local/bin/" clipmenud
 exec setxkbmap es
@@ -248,8 +250,7 @@ exec xfce4-clipman
 exec dunst
 exec kdeconnect-indicator
 # Scripts
-exec ~/github/My_Scripts/sh/mic-webcam-check/webcamCheck.sh
-exec ~/github/My_Scripts/sh/mic-webcam-check/micCheck.sh
+exec ~/.config/i3/myScripts/execMicWebcamCheck.sh
 exec ~/github/My_Scripts/sh/cam0.sh
 # Others
 exec_always feh --bg-scale ~/Imágenes/FONDOS/wallpaper.jpg
