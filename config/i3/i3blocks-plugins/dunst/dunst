@@ -18,6 +18,7 @@ import json
 def mute_toggle():
     '''Toggle dunst notifications'''
     sp.run(["dunstctl", "set-paused", "toggle"], check=True)
+    sp.run(["pkill", "-SIGRTMIN+3", "i3blocks"], check=True)
 
 
 def clicked():
