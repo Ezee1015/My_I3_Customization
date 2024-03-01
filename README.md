@@ -42,13 +42,12 @@ My I3 bare minimum customization to get it working just like I need
 
 ### Integrado
 
-|         Atajo         | Función                                    |
-|:---------------------:|--------------------------------------------|
-| **`MOD + Shift + c`** | Recargar I3                                |
-| **`MOD + Shift + r`** | Reiniciar I3                               |
-| **`MOD + Shift + e`** | Salir de I3                                |
-|   **`MOD + Enter`**   | Abrir terminal (Alacritty)                 |
-|     **`MOD + d`**     | Abre `rofi` en busca de comandos de terminal |
+|         Atajo         | Función                                      |
+|:---------------------:|----------------------------------------------|
+| **`MOD + Shift + c`** | Recargar I3                                  |
+| **`MOD + Shift + r`** | Reiniciar I3                                 |
+| **`MOD + Shift + e`** | Salir de I3                                  |
+|   **`MOD + Enter`**   | Abrir terminal (Alacritty)                   |
 
 ### Dunst (notificaciones)
 
@@ -63,14 +62,28 @@ My I3 bare minimum customization to get it working just like I need
 |    **`Click - Rueda del mouse`**    | Ejecuta la accion por default                                   |
 |  **`Click - Mouse botón derecho`**  | Cierra notificación                                             |
 
+### Rofi
+
+|         Atajo         | Función                                      |
+|:---------------------:|----------------------------------------------|
+|     **`MOD + d`**     | Abre `rofi` en busca de comandos de terminal |
+| **`MOD + Shift + d`** | Abre `rofi` en busca de archivos .desktop    |
+|     **`MOD + -`**     | Abre `rofi` en en modo calculadora           |
+| **`MOD + Shift + f`** | Abre `rofi` en modo *file browser*           |
+
+#### Atajos internos
+
+|                                      Atajo                                     | Función                                                                          |
+|:------------------------------------------------------------------------------:|----------------------------------------------------------------------------------|
+| **`Control + [hl]`**, **`Shift + [Izquierda/Derecha]`**, **`Control + [Tab]`** | Cambia entre modos                                                               |
+|             **`Control + [jk]`**, **`[Arriba/Abajo]`**, **`[Tab]`**            | Sube/baja entre los resultado                                                    |
+|                              **`Shift + [Enter]`**                             | Permite seleccionar un archivo con el que abrir la aplicación (en modo run/drun) |
+
 ### Custom
 
 |                Atajo                | Función                                   |
 |:-----------------------------------:|-------------------------------------------|
 |        **`MOD + Shift + x`**        | Bloquea la pantalla                       |
-|        **`MOD + Shift + d`**        | Abre `rofi` en busca de archivos .desktop |
-|            **`MOD + -`**            | Abre `rofi` en en modo calculadora        |
-|        **`MOD + Shift + f`**        | Abre `rofi` en modo *file browser* |
 |            **`MOD + c`**            | Abre el historial del portapapeles        |
 |          **`PrintScreen`**          | Screenshot de la pantalla enter           |
 |      **`Shift + PrintScreen`**      | Screenshot de una región seleccionada     |
