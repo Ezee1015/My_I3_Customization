@@ -253,9 +253,12 @@ exec kdeconnect-indicator
 exec ~/.config/i3/myScripts/execMicWebcamCheck.sh
 exec ~/github/My_Scripts/sh/cam0.sh
 # Others
-exec_always feh --bg-scale ~/Imágenes/FONDOS/wallpaper.jpg
 exec_always ffplay ~/.config/i3/sounds/login.ogg -autoexit -nodisp -loglevel quiet
 exec ~/.config/i3/i3-battery-popup/i3-battery-popup -n -i "battery-020"
+
+# Wallpaper
+# exec_always feh --bg-scale ~/Imágenes/FONDOS/wallpaper.jpg
+exec_always feh --bg-center ~/Imágenes/FONDOS/Debian\ Logo/ditherlogocircle.png
 
 # Window rules
 assign [class="ffplay"] $workspace4
