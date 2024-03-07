@@ -31,8 +31,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # GAPS
-# gaps inner 10px
-# gaps outer 0px
+gaps inner 10px
+gaps outer 0px
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
@@ -272,6 +272,8 @@ assign [class="ffplay"] $workspace4
 
 # Icons on the title bar (with Horizontal padding)
 for_window [all] title_window_icon padding 6px
+# Border
+for_window [all] border normal 3
 
 for_window [class="Yad"] floating enable
 for_window [class="Xmag"] floating enable
