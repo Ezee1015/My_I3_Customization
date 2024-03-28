@@ -122,3 +122,4 @@ WM_CLASS(STRING) = "YYY", "XXX"
 Fuentes:
 - <https://invent.kde.org/plasma/ocean-sound-theme> (audios)
 - <https://gitlab.manjaro.org/packages/community/i3/i3-scrot> (i3-scrot)
+- <https://www.debian.org/logos/hexagonal.png>
