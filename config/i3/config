@@ -235,6 +235,10 @@ bindsym --release Shift+Print exec i3-scrot -s
 bindsym Control+Shift+Print exec i3-scrot -w
 bindsym Control+Print exec thunar ~/Imágenes
 
+# Change çÇ to <>
+bindsym --release $mod+ccedilla exec xdotool key less
+bindsym --release $mod+Shift+ccedilla exec xdotool key greater
+
 # Zoom/Magnify
 bindsym --release $mod+z exec ~/.config/i3/myScripts/zoomme.sh
 bindsym --release $mod+Shift+z exec rm /tmp/img.png & scrot -s -F /tmp/img.png && feh /tmp/img.png
