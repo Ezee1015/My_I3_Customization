@@ -243,6 +243,9 @@ bindsym --release $mod+Shift+ccedilla exec xdotool key greater
 bindsym --release $mod+z exec ~/.config/i3/myScripts/zoomme.sh
 bindsym --release $mod+Shift+z exec rm /tmp/img.png & scrot -s -F /tmp/img.png && feh /tmp/img.png
 
+# Open Firefox bookmarks
+bindsym $mod+b exec ~/.config/i3/myScripts/firefox_bookmarks.sh
+
 # bindsym $mod+Mod2+KP_1 comando # Atajo apretando Alt+1(Numpad) en el teclado numérico
 
 # Auto execute apps at startup....

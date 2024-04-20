@@ -92,6 +92,7 @@ My I3 bare minimum customization to get it working just like I need
 |        **`MOD + 0 (numpad)`**       | *Screen magnifier*                        |
 |            **`MOD + z`**            | Abre ZoomMe                               |
 |        **`MOD + Shift + z`**        | *Custom Screen magnifier* con feh y scrot |
+|            **`MOD + b`**            | Abre los *bookmarks* de Firefox           |
 |          **`MOD + Av Pag`**         | Sube el volumen                           |
 |          **`MOD + Re Pag`**         | Baja el volumen                           |
 |          **`MOD + Inicio`**         | Sube el brillo                            |
