@@ -41,7 +41,7 @@ rofi_firefox_bookmarks() {
     exit 0
   fi
 
-  WEBPAGE=$(echo "$BOOKMARK_SELECTED" | sed 's/.*(\(https\?:\/\/.*\))$/\1/g')
+  WEBPAGE=$(echo "$BOOKMARK_SELECTED" | sed 's/.*(\(\(http:\/\/\|https:\/\/\|ext+container:\).*\))$/\1/g')
 
   echo "Opening with firefox: $WEBPAGE"
 
