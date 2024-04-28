@@ -45,7 +45,7 @@ rofi_firefox_bookmarks() {
 
   echo "Opening with firefox: $WEBPAGE"
 
-  firefox "$WEBPAGE"
+  firefox "$WEBPAGE" &
 }
 
 get_firefox_bookmarks
