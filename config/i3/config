@@ -200,8 +200,8 @@ bindsym $mod+End  exec xbacklight -dec 10 || ~/.config/i3/myScripts/brightnessCo
 # Lock screen
 # set $wallpaperLock Imágenes/FONDOS/Paisajes/wallpaperflare.com_wallpaper\(1\).jpg
 # bindsym $mod+Shift+x exec convert $wallpaperLock -resize $(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/') RGB:- | i3lock --raw $(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/'):rgb --image /dev/stdin
-set $suspend (scrot - | convert - -blur 0x4 - | composite -gravity southeast ~/.config/i3/i3lock-overlay.png - /tmp/lock.png) && i3lock -i /tmp/lock.png
-bindsym $mod+Shift+x exec $suspend
+set $lock_screen (scrot - | convert - -blur 0x4 - | composite -gravity southeast ~/.config/i3/i3lock-overlay.png - /tmp/lock.png) && i3lock -i /tmp/lock.png
+bindsym $mod+Shift+x exec $lock_screen
 
 # Modo de salir
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -211,7 +211,7 @@ mode "exit: [l]ogout, [r]eboot, [s]hutdown, [S]uspend" {
   bindsym l exec $shutdown_music && i3-msg exit
   bindsym r exec $shutdown_music && systemctl reboot
   bindsym s exec $shutdown_music && systemctl poweroff
-  bindsym Shift+s exec $suspend && systemctl suspend && i3-msg mode "default"
+  bindsym Shift+s exec i3-msg mode "default" && $lock_screen && systemctl suspend
   bindsym Escape mode "default"
   bindsym Return mode "default"
   bindsym $mod+Shift+e mode "default"
