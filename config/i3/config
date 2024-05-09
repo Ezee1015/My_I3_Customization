@@ -236,8 +236,8 @@ bindsym Control+Shift+Print exec i3-scrot -w
 bindsym Control+Print exec thunar ~/Imágenes
 
 # Change çÇ to <>
-bindsym --release $mod+ccedilla exec xdotool key less
-bindsym --release $mod+Shift+ccedilla exec xdotool key greater
+# bindsym --release $mod+ccedilla exec xdotool key less
+# bindsym --release $mod+Shift+ccedilla exec xdotool key greater
 
 # Zoom/Magnify
 bindsym --release $mod+z exec ~/.config/i3/myScripts/zoomme.sh
@@ -272,6 +272,8 @@ exec ~/.config/i3/myScripts/waitForInternet.sh && ~/github/My_Scripts/sh/cam0.sh
 # Others
 exec_always ffplay ~/.config/i3/sounds/login.ogg -autoexit -nodisp -loglevel quiet
 exec ~/.config/i3/i3-battery-popup/i3-battery-popup -n -i "battery-020"
+# Change çÇ to <> (https://linuxconfig.org/reprogram-keyboard-keys-with-xmodmap)
+exec_always xmodmap -e "keycode 51 = less greater less greater braceright"
 
 # Wallpaper
 # exec_always feh --bg-scale ~/Imágenes/FONDOS/wallpaper.jpg
