@@ -211,7 +211,7 @@ mode "exit: [l]ogout, [r]eboot, [s]hutdown, [S]uspend" {
   bindsym l exec $shutdown_music && i3-msg exit
   bindsym r exec $shutdown_music && systemctl reboot
   bindsym s exec $shutdown_music && systemctl poweroff
-  bindsym Shift+s exec i3-msg mode "default" && $lock_screen && systemctl suspend
+  bindsym Shift+s exec i3-msg mode "default" && $lock_screen && systemctl suspend && ~/github/My_Scripts/sh/updateDate.sh
   bindsym Escape mode "default"
   bindsym Return mode "default"
   bindsym $mod+Shift+e mode "default"
