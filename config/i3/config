@@ -272,7 +272,9 @@ exec ~/.config/i3/myScripts/waitForInternet.sh && ~/github/My_Scripts/sh/cam0.sh
 # Others
 exec_always ffplay ~/.config/i3/sounds/login.ogg -autoexit -nodisp -loglevel quiet
 exec ~/.config/i3/i3-battery-popup/i3-battery-popup -n -i "battery-020"
-# Change çÇ to <> (https://linuxconfig.org/reprogram-keyboard-keys-with-xmodmap)
+# Set keyboard to spanish and Change çÇ to <>
+# (https://linuxconfig.org/reprogram-keyboard-keys-with-xmodmap)
+exec_always setxkbmap -layout es
 exec_always xmodmap -e "keycode 51 = less greater less greater braceright"
 
 # Wallpaper
